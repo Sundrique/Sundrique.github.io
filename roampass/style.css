@@ -81,3 +81,9 @@ h1 img {
         width: 800px;
     }
 }
+
+.addthis_toolbox {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
