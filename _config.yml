@@ -1,0 +1,14 @@
+name: Aleksandr Sandrovsky
+description: Blogging about stuffs
+meta_description: "Your New Jekyll Site, Blogging about stuffs"
+
+markdown: redcarpet
+highlighter: pygments
+logo: false
+paginate: 15
+baseurl: /
+domain_name: 'sandrovsky.com'
+
+# Details for the RSS feed generator
+url:            'http://sandrovsky.com'
+author:         'Aleksandr Sandrovsky'
