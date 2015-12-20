@@ -5,16 +5,16 @@ tags: [python, jupyter, lasagne, theano, gpu, aws, cuda, ubuntu]
 image:
   feature: cover.jpg
 ---
-[Lasagne](https://github.com/Lasagne/Lasagne) is a powerful Python library to build and train neural networks in [Theano](https://github.com/Theano/Theano). However you don't get all the benefits of it unless you have CUDA-capable GPU. Fortunately, we can utilize Amazon Web Services which combines convenience and reasonable prices. We only need to create and configure instance once and run/stop it whenever we need later on.
+[Lasagne](https://github.com/Lasagne/Lasagne) is a powerful Python library to build and train neural networks in [Theano](https://github.com/Theano/Theano). However, you don't get all the benefits of it unless you have CUDA-capable GPU. Fortunately, we can utilize Amazon Web Services which combines convenience and reasonable prices. We only need to create and configure instance once and run/stop it whenever we need later on.
 
 ## Notice
 
 [The process  of running GPU instance on AWS](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance_linux.html) is out of the scope of this article. It's pretty straightforward and described in many other tutorials.
-Nevertheless there is a couple of caveats I would like to mention:
+Nevertheless, there are a couple of caveats I would like to mention:
 
 1. It's assumed that you use Ubuntu 14.04 image. 
 2. GPU instances are not available in all regions, so if you cannot find them in the list of instance types, simply try another region.
-3. Security group has only SSH rule by default, we will also need an HTTP access (Protocol: TCP/IP, port: 80).
+3. A security group has only SSH rule by default, we will also need an HTTP access (Protocol: TCP/IP, port: 80).
 
 Here goes!
 
@@ -36,7 +36,7 @@ $ sudo sh -c "echo /usr/local/cuda/lib64 > /etc/ld.so.conf.d/cuda.conf"
 $ sudo ldconfig
 {% endhighlight %}
 
-3) Reboot and add `nvidia` module to kernel.
+3) Reboot and add `nvidia` module to a kernel.
 {% highlight sh %}
 $ sudo reboot
 $ sudo modprobe nvidia
@@ -56,7 +56,7 @@ $ sudo pip install --no-deps git+git://github.com/Lasagne/Lasagne.git
 $ echo -e "[global]\nfloatX = float32\ndevice = gpu" > ~/.theanorc
 {% endhighlight %}
 
-We will set `THEANO_FLAGS` environment variable in Upstart service configuration, therefore this step is optional and only needed if you are willing to run scripts via command line.
+We will set `THEANO_FLAGS` environment variable in Upstart service configuration, therefore, this step is optional and only needed if you are willing to run scripts via command line.
 
 ## Jupyter
 
