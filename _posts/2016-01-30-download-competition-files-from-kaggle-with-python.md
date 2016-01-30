@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Download competition data from Kaggle with BeautifulSoup and Mechanize"
-date:   2015-10-23 16:33:00
+date:   2016-01-30 19:00:00
 ---
 
 There might be several reasons why you need to get files from Kaggle via script. In my case I was playing with Theano and Lasagne and wanted to download data directly to AWS GPU instance.
