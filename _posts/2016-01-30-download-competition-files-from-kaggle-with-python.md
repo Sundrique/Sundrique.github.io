@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Download competition data from Kaggle with BeautifulSoup and Mechanize"
-tags: [python, kaggle, beautifulsoup, bechanize]
+tags: [python, kaggle, beautifulsoup, mechanize]
 date:   2016-01-30 19:00:00
 image:
   feature: cover.jpg
