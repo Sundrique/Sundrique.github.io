@@ -1,7 +1,10 @@
 ---
 layout: post
 title:  "Apache Storm Spout for Bitcoin transactions processing"
+tags: [java, apache storm, spout, bitcoin, websocket]
 date:   2015-12-27 17:52:00
+image:
+  feature: cover.jpg
 ---
 
 This topology has been written as my final project for "Real-Time Analytics with Apache Storm" course at [Udacity](https://www.udacity.com) and doesn't have much practical sense as the maximum throughput of Bitcoin network is only about 7 transactions/second. It's unlikely to be changed soon, at least until the number of transaction in the network approaches this constraint. Thus, it doesn't make a lot of sense to use Apache Storm for processing. You can analyse Bitcoin transactions even with a single script (application) without a need to distribute computations unless you perform some really heavy and CPU consuming calculations. Nonetheless, it can be a good starting point for your own spout or WebSocket client in Java. 
